@@ -12,9 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        PaymentObserver.shared.applePayControllerDelegate = self
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func chargeMoneyPressed() {
+        PaymentObserver.shared.handleApplePayButtonPressed()
+    }
+    
+    @IBAction func sendMoneyPressed() {
+        
+    }
 }
 
